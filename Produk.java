@@ -1,3 +1,7 @@
+/**
+ * kelas untuk menyimpan data produk
+ * id, waktuKerja, bahanBaku, dan keuntunganPerUnit
+ */
 public class Produk {
   char id;
   double waktuKerja;
@@ -10,6 +14,4 @@ public class Produk {
     this.bahanBaku = bahanBaku;
     this.keuntunganPerUnit = keuntunganPerUnit;
   }
-
-  
 }
