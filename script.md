@@ -28,12 +28,25 @@ Program kami juga mengimplementasikan poin bonus, fitur untuk memasukkan data un
 ## Penjelasan Algoritma dan Method  
 ### Validasi Input (Abiyyu + Inyo)  
 
-pada program, user diminta untuk memasukkan kapasitas waktu kerja mesin dalam satuan jam. Kemudian akan dilakukan pemanggilan method, di dalam method user dapat memasukkan nilai kapasitas waktu kerja dan kemudian akan di validasi, apabila < 0 maka program akan meminta user untuk memasukkan nilai yang bernilai positif.
+pada program, user diminta untuk memasukkan kapasitas waktu kerja mesin dalam satuan jam. Kemudian akan dilakukan pemanggilan method inputDoublePositif, di dalam method user dapat memasukkan nilai kapasitas waktu kerja dan kemudian akan di validasi, apabila < 0 maka program akan meminta user untuk memasukkan nilai yang bernilai positif. nilai dari input akan tersimpan pada variabel kapasitasWaktu
 
-setelah itu, pada program, user diminta untuk memasukkan kapasitas bahan baku dalam satuan unit. Kemudian akan dilakukan pemanggilan method, di dalam method user dapat memasukkan nilai kapasitas bahan baku dan kemudian akan di validasi, apabila < 0 maka program akan meminta user untuk memasukkan nilai yang bernilai positif.
+setelah itu, pada program, user diminta untuk memasukkan kapasitas bahan baku dalam satuan unit. Kemudian akan dilakukan pemanggilan method inputDoublePositif, di dalam method user dapat memasukkan nilai kapasitas bahan baku dan kemudian akan di validasi, apabila < 0 maka program akan meminta user untuk memasukkan nilai yang bernilai positif. nilai dari input akan tersimpan pada variabel kapasitasBahan
 
+kemudian, pada program user diminta untuk memasukkan banyak jenis produk, kemudian akan dilakukan pemangginlan method inputIntPositif, di dalam method program akan menerima input dari user dan mengecek apakah input < 0, bila < 0 maka program akan meminta user untuk input bilangan positif. nilai dari input akan tersimpan pada variabel banyakJenis. 
 
+input user yang terimpan pada variabel banyakJenis akan menjadi tumpuan berapa banyak jenis barang. hal tersebut kami implementasikan dengan membuat array yang memuat panjang dari input user yang telah tersimpan di variabel banyakJenis.
 
+kemudian akan dilakukan penginputan waktu kerja, bahan baku dan keuntungan dari tiap tiap jenis produk. hal tersebut kami implementasikan dengan menggunakan for loop, yang dimana perulangan dimulai dari 0 hingga < banyakJenis yang merupakan input dari user yang berisi banyak jenis produk.
+
+untuk penamaan id, kami mulai dari A dan produk setelahnya kami +1 sehingga tiap perulangan akan bertamnbah menjasi C D E dll. 
+
+setelah pemberian id, program meminta user untuk menginputkan waktu kerja, yang dimana input dari user akan disimpan di variabel waktuKerja, dan dilakukan pemnaggilan method inputDouble yang berfungsi untuk input dan validasi, apabila < 0 maka program akan meminta user untuk input hinga positif.
+
+kemudian program meminta user untuk menginputkan bahan baku produk yang dimana input dari user akan disimpan di variabel bahanBaku, dan dilakukan pemanggilan method inputDouble yang berfungsi untuk input dan validasi, apabila input < 0 maka program akan meminta user untuk input hinga positif.
+
+kemudian program meminta user untuk menginputkan keuntungan per unit produk yang dimana input dari user akan disimpan di variabel keuntunganPerUnit, dan dilakukan pemanggilan method inputDouble yang berfungsi untuk input dan validasi, apabila input < 0 maka program akan meminta user untuk input hinga positif.
+
+sehingga setelah user input semua nilai yang dibutuhkan maka array dengan variabel produkArray akan terisi dengan nilai nilai sesuai dengan input dari user baik id, waktu kerja, bahan baku dan juga keuntungan per unit.
 ### Proses Optimisasi (Zhafif)  
 
 
