@@ -1,1 +1,46 @@
-Untuk mencari kombinasi banyak produk optimal, kita menggunakan method cariKombinasiOptimal(int[] )
+Untuk mencari kombinasi banyak produk optimal, kita menggunakan method 
+
+cariKombinasiOptimal(kombinasi[], indeksProduk)
+
+..yang menerima argumen berupa array kombinasi dan indeks produk.
+
+Indeks produk dimulai dari 0 dan isi dari array kombinasi adalah {0, 0, ..., 0} atau {0, 0} jika produknya ada 2 (A dan B).
+
+Alur kerja method:
+1 PASS: kombinasi = {0, 0}, indeksProduk = 0
+2 produkArray.length = 2
+3 IF: 0 = 2? no, pass
+4 CREATE OBJECT: produk = produkArray[0] : Produk A
+5 SET: waktuTerpakai = hitungWaktuTerpakai({0, 0})
+  1 INVOKE: hitungWaktuTerpakai()
+    1 SET: waktuTerpakai = 0
+    2 FOR: i in 0..1 DO:
+      1 i = 0: waktuTerpakai += produkArray[0].waktuKerja * kombinasi[0]
+              1 waktuTerpakai = 0 + 10 * 0
+              2 waktuTerpakai = 0
+      2 i++
+      3 i = 1: waktuTerpakai += produkArray[1].waktuKerja * kombinasi[1]
+              1 waktuTerpakai = 0 + 15 * 0
+              2 waktuTerpakai = 0
+      4 i++
+      5 i = 2 not in 0..1
+    3 END FOR
+    4 RETURN: waktuTerpakai = 0
+  2 hitungBahanTerpakai({0, 0}) = 0
+6 waktuTerpakai = 0
+7 SET: bahanTerpakai = hitungBahanTerpakai[{0, 0}]
+  1 INVOKE: hitungBahanTerpakai()
+    1 SET: bahanTerpakai = 0
+    2 FOR: i in 0..1 DO:
+      1 i = 0: bahanTerpakai += produkArray[0].bahanBaku * kombinasi[0]
+          1 bahanTerpakai = 0 + 5 * 0
+          2 bahanTerpakai = 0
+      2 i++
+      3 i = 1: bahanTerpakai += produkArray[1].bahanBaku * kombinasi[1]
+              1 bahanTerpakai = 0 + 3 * 0
+              2 bahanTerpakai = 0
+      4 i++
+      5 i = 2 not in 0..1
+    3 END FOR
+    4 RETURN: bahanTerpakai = 0
+8
