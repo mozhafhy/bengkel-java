@@ -113,7 +113,7 @@ public class Bengkel {
     int[] kombinasi = new int[produkArray.length];
     kombinasiOptimal = kombinasi.clone();
     tambahOutput(kombinasi, true);
-    cariJumlahOptimal(kombinasi, 0);
+    cariKombinasiOptimal(kombinasi, 0);
 
     output = output.substring(0, indeksOutputOptimal) + " (optimal) "
         + output.substring(indeksOutputOptimal, output.length());
@@ -152,7 +152,7 @@ public class Bengkel {
    * @return kombinasi jumlah unit yang optimal (menghasilkan total keuntungan
    *         terbesar tanpa melebihi kapasitas)
    */
-  private static int[] cariJumlahOptimal(int[] kombinasi, int indeksProduk) {
+  private static int[] cariKombinasiOptimal(int[] kombinasi, int indeksProduk) {
     // cek boundary
     if (indeksProduk == produkArray.length)
       return kombinasi;
@@ -165,7 +165,7 @@ public class Bengkel {
     // optimisasi
     while (true) {
       // optimisasi produk berikutnya
-      cariJumlahOptimal(kombinasi.clone(), indeksProduk + 1);
+      cariKombinasiOptimal(kombinasi.clone(), indeksProduk + 1);
 
       // naikkan jumlah unit untuk produk saat ini
       waktuTerpakai += produk.waktuKerja;
