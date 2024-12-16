@@ -149,13 +149,11 @@ public class Bengkel {
    * 
    * @param kombinasi    kombinasi jumlah unit setiap produk pada produkArray
    * @param indeksProduk indeks paling kiri untuk produk yang ingin dioptimisasi
-   * @return kombinasi jumlah unit yang optimal (menghasilkan total keuntungan
-   *         terbesar tanpa melebihi kapasitas)
    */
-  private static int[] cariKombinasiOptimal(int[] kombinasi, int indeksProduk) {
+  private static void cariKombinasiOptimal(int[] kombinasi, int indeksProduk) {
     // cek boundary
     if (indeksProduk == produkArray.length)
-      return kombinasi;
+      return;
 
     Produk produk = produkArray[indeksProduk];
 
@@ -183,8 +181,6 @@ public class Bengkel {
 
       tambahOutput(kombinasi, apakahOptimal);
     }
-
-    return kombinasi;
   }
 
   /**
